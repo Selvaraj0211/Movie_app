@@ -10,7 +10,7 @@ const Home = () => {
         let url = `https://api.themoviedb.org/3/movie/popular?page=${page}&api_key=918011a9db9c5aecef13082ac4e16ef1`;
 
         if (Search) {
-            url = `https://api.themoviedb.org/3/search/movie?query=${Search}&api_key=918011a9db9c5aecef13082ac4e16ef1`
+            url = `https://api.themoviedb.org/3/search/movie?query=${Search}&api_key=918011a9db9c5aecef13082ac4e16ef1`;
         }
         fetch(url)
             .then((response) => response.json())
