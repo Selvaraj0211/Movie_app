@@ -1,6 +1,5 @@
 import React, { useContext, useState } from 'react'
 import { FaDownload, FaHeart, FaRegHeart, FaCheckCircle, FaStar } from "react-icons/fa"
-// import { MdDownloadDone } from "react-icons/md";
 import { WatchlistContext } from "../context/WatchlistContext";
 
 
