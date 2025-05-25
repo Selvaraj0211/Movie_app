@@ -21,7 +21,7 @@ movie.title.toLowerCase().includes(search.toLowerCase())
     <div className='p-4 pt-16'>
       <input type="text" placeholder='Search Movies...' 
       onChange={(e)=>setSearch(e.target.value)}
-      className='p-2 w-3/4 md:w-1/2 border border-gray-600 bg-blue-900 opacity-80 backdrop-blur-md text-white fixed top-16 left-1/2 -translate-x-1/2 z-10'/>
+      className='p-2 w-3/4 md:w-1/2 border border-red-900 rounded bg-red-300 opacity-100 backdrop-blur-lg text-black  fixed top-16 left-1/2 -translate-x-1/2 z-13'/>
       <div className='mt-15 flex justify-center'>
         <Genredrop genreList={genreList} selectedGenre={selectedGenre} setSelectedGenre={setSelectedGenre}/>
       </div>

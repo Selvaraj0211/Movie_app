@@ -19,25 +19,31 @@ const Home = () => {
 
     return (
         <div className='p-4 pt-16'>
+            <div className='fixed top-15 z-13 bg-white p-6.5 w-full'>
             <input type="text" placeholder='Search Movies...'
                 onChange={(e) => setSearch(e.target.value)}
-                className='p-2 w-3/4 md:w-1/2 border border-gray-600 bg-blue-900 opacity-80 backdrop-blur-md text-white fixed top-16 left-1/2 -translate-x-1/2 z-10' />
+                className='p-2 w-3/4 md:w-1/2 border border-red-900 rounded bg-red-300 opacity-100 backdrop-blur-lg text-black  fixed top-16 left-1/2 -translate-x-1/2 z-13' />
+            </div>
             <div className="mt-16 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5">
                 {movies.map(movie => {
                     return (
                         <Moviescard key={movie.id} movie={movie} />
                     );
-                })}</div>
+                })}
+            </div>
             <div className="flex justify-between mt-5">
                 <button
                     disabled={page == 1}
                     className='bg-gray-500 text-white rounded p-2'
                     onClick={() => {
                         setPage(prev => prev - 1);
-                    }}>PREV</button>
-                <button className='bg-gray-500 text-white rounded p-2' onClick={() => {
-                    setPage(prev => prev + 1);
-                }}>NEXT</button>
+                    }}>
+                    PREV</button>
+                <button
+                    className='bg-gray-500 text-white rounded p-2' onClick={() => {
+                        setPage(prev => prev + 1);
+                    }}>
+                    NEXT</button>
             </div>
         </div>
     )
